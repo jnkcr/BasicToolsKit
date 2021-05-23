@@ -14,6 +14,8 @@ final class StringExtensionsTests: XCTestCase {
     let string2: String = "   Hello, world!"    // .count = 16
     let string3: String = "  Hello, world!    " // .count = 19
     
+    // Final .count after adjusments should be 13
+    
     func testCharacterRemoval() {
         
         XCTAssertEqual(string1.removeFirstAndLastBlankCharacters().count, 13)
