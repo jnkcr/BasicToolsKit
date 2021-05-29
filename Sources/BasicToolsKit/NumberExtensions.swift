@@ -10,11 +10,11 @@ import Foundation
 
 extension Double {
     
-    public func toString(localeID: String? = nil) -> String {
+    public func toString(localeID: String? = nil, fractionDigits: Int = 2) -> String {
         let formatter = NumberFormatter()
         
         formatter.numberStyle           = .decimal
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = fractionDigits
         if let localeString = localeID {
             formatter.locale = Locale(identifier: localeString)
         }
@@ -30,11 +30,11 @@ extension Double {
 
 extension Float {
     
-    public func toString(localeID: String? = nil) -> String {
+    public func toString(localeID: String? = nil, fractionDigits: Int = 2) -> String {
         let formatter = NumberFormatter()
         
         formatter.numberStyle           = .decimal
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = fractionDigits
         if let localeString = localeID {
             formatter.locale = Locale(identifier: localeString)
         }
