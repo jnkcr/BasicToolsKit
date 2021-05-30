@@ -33,7 +33,6 @@ extension Double {
         
         // Return formatted value
         return formattedValue
-        
     }
     
 }
@@ -64,7 +63,6 @@ extension Float {
         
         // Return formatted value
         return formattedValue
-        
     }
     
 }
