@@ -8,6 +8,8 @@
 import Foundation
 
 
+// MARK: - Double
+
 extension Double {
     
     /// Conversion of Double type to localized and formatted String
@@ -37,6 +39,8 @@ extension Double {
     
 }
 
+
+// MARK: - Float
 
 extension Float {
     
