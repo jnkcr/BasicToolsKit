@@ -10,6 +10,11 @@ import Foundation
 
 extension Double {
     
+    /// Conversion of Double type to localized and formatted String
+    /// - Parameters:
+    ///   - localeID: string locale id
+    ///   - fractionDigits: number of maximum fraction digits
+    /// - Returns: localized and formatted String
     public func toString(localeID: String? = nil, fractionDigits: Int = 2) -> String {
         
         // Setup of formatter
@@ -36,6 +41,11 @@ extension Double {
 
 extension Float {
     
+    /// Conversion of Float type to localized and formatted String
+    /// - Parameters:
+    ///   - localeID: string locale id
+    ///   - fractionDigits: number of maximum fraction digits
+    /// - Returns: localized and formatted String
     public func toString(localeID: String? = nil, fractionDigits: Int = 2) -> String {
         
         // Setup of formatter
