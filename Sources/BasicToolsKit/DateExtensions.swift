@@ -11,8 +11,8 @@ import Foundation
 extension Date {
     
     /// Converts date to String with given format
-    /// - Parameter format: format of date
-    /// - Returns: formatted date as string type
+    /// - Parameter format: Format of date
+    /// - Returns: Formatted date as string type
     public func toString(as format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
