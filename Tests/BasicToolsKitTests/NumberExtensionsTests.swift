@@ -26,7 +26,7 @@ class NumberExtensionsTests: XCTestCase {
     let number15: Float = 0
     
     
-    func testFormatingDouble() {
+    func testBasicDoubleFormating() {
         
         // Using czech locale code to be able to predict result
         
@@ -45,8 +45,8 @@ class NumberExtensionsTests: XCTestCase {
         XCTAssertEqual(n05, "0")
         
         // Set-up for testing with maximumDigitalFraction = 0
-        let n001 = number01.toString(localeID: "cs", fractionDigits: 0)
-        let n003 = number03.toString(localeID: "cs", fractionDigits: 0)
+        let n001 = number01.toString(fractionDigits: 0, localeID: "cs")
+        let n003 = number03.toString(fractionDigits: 0, localeID: "cs")
         
         // Tests with maximumDigitalFraction = 0
         XCTAssertEqual(n001, "1")
@@ -54,7 +54,7 @@ class NumberExtensionsTests: XCTestCase {
         
     }
     
-    func testFormatingFloat() {
+    func testBasicFloatFormating() {
         
         // Using czech locale code to be able to predict result
         
@@ -73,14 +73,34 @@ class NumberExtensionsTests: XCTestCase {
         XCTAssertEqual(n15, "0")
         
         // Set-up for testing with maximumDigitalFraction = 0
-        let n011 = number11.toString(localeID: "cs", fractionDigits: 0)
-        let n013 = number13.toString(localeID: "cs", fractionDigits: 0)
+        let n011 = number11.toString(fractionDigits: 0, localeID: "cs")
+        let n013 = number13.toString(fractionDigits: 0, localeID: "cs")
         
         // Tests with maximumDigitalFraction = 0
         XCTAssertEqual(n011, "1")
         XCTAssertEqual(n013, "3")
         
     }
+    
+//    func testCurrencyFloatFormatting() {
+//
+//        // Using czech locale code to be able to predict result
+//
+//        // Set-up for testing with default maximumDigitalFraction
+//        let n11 = number11.toStringAsCurrency(localeID: "cs")
+//        let n12 = number12.toStringAsCurrency(localeID: "cs")
+//        let n13 = number13.toStringAsCurrency(localeID: "cs")
+//        let n14 = number14.toStringAsCurrency(localeID: "cs")
+//        let n15 = number15.toStringAsCurrency(localeID: "cs")
+//
+//        // Test with default maximumDigitalFraction = 2
+//        XCTAssertEqual(n11, "1,15 Kč")
+//        XCTAssertEqual(n12, "2,70 Kč")
+//        XCTAssertEqual(n13, "3,00 Kč")
+//        XCTAssertEqual(n14, "3,00 Kč")
+//        XCTAssertEqual(n15, "0,00 Kč")
+//
+//    }
     
     
 }

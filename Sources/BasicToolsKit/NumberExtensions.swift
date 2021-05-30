@@ -17,7 +17,7 @@ extension Double {
     ///   - localeID: String locale id
     ///   - fractionDigits: Number of maximum fraction digits
     /// - Returns: Localized and formatted String
-    public func toString(localeID: String? = nil, fractionDigits: Int = 2) -> String {
+    public func toString(fractionDigits: Int = 2, localeID: String? = nil) -> String {
         
         // Setup of formatter
         let formatter = NumberFormatter()
@@ -49,7 +49,7 @@ extension Float {
     ///   - localeID: String locale id
     ///   - fractionDigits: Number of maximum fraction digits
     /// - Returns: Localized and formatted String
-    public func toString(localeID: String? = nil, fractionDigits: Int = 2) -> String {
+    public func toString(fractionDigits: Int = 2, localeID: String? = nil) -> String {
         
         // Setup of formatter
         let formatter = NumberFormatter()
@@ -62,6 +62,28 @@ extension Float {
         }
         
         // Convert value
+        let number = NSNumber(value: self)
+        let formattedValue = formatter.string(from: number)!
+        
+        // Return formatted value
+        return formattedValue
+    }
+    
+    
+    public func toStringAsCurrency(fractionDigits: Int = 2, currencyCode: String = "czk", localeID: String? = nil) -> String {
+        
+        // Setup of formatter
+        let formatter = NumberFormatter()
+        formatter.numberStyle           = .currency
+        formatter.currencyCode          = currencyCode
+        formatter.maximumFractionDigits = fractionDigits
+        
+        // Check for locale id
+        if let localeString = localeID {
+            formatter.locale = Locale(identifier: localeString)
+        }
+        
+        // Format value
         let number = NSNumber(value: self)
         let formattedValue = formatter.string(from: number)!
         
