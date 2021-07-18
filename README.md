@@ -8,6 +8,7 @@ Date type:
 
 Numbers:
 - toString() [Double, Float]
+- toStringAsCurrency() [Double, Float]
 
 String type:
 - removeFirstAndLastBlankCharacters()

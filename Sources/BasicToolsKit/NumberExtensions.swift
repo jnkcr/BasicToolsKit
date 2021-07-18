@@ -29,12 +29,11 @@ extension Double {
             formatter.locale = Locale(identifier: localeString)
         }
         
-        // Convert value
+        // Convert value to right format
         let number = NSNumber(value: self)
-        let formattedValue = formatter.string(from: number)!
         
         // Return formatted value
-        return formattedValue
+        return formatter.string(from: number)!
     }
     
     
@@ -51,12 +50,11 @@ extension Double {
             formatter.locale = Locale(identifier: localeString)
         }
         
-        // Format value
+        // Convert value to right format
         let number = NSNumber(value: self)
-        let formattedValue = formatter.string(from: number)!
         
         // Return formatted value
-        return formattedValue
+        return formatter.string(from: number)!
     }
     
 }
@@ -83,12 +81,11 @@ extension Float {
             formatter.locale = Locale(identifier: localeString)
         }
         
-        // Convert value
+        // Convert value to right format
         let number = NSNumber(value: self)
-        let formattedValue = formatter.string(from: number)!
         
         // Return formatted value
-        return formattedValue
+        return formatter.string(from: number)!
     }
     
     
@@ -105,12 +102,11 @@ extension Float {
             formatter.locale = Locale(identifier: localeString)
         }
         
-        // Format value
+        // Convert value to right format
         let number = NSNumber(value: self)
-        let formattedValue = formatter.string(from: number)!
         
         // Return formatted value
-        return formattedValue
+        return formatter.string(from: number)!
     }
     
 }
