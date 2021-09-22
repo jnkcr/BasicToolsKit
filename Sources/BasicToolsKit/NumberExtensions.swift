@@ -12,9 +12,9 @@ import Foundation
 
 extension Double {
     
-    /// Conversion of Double type to localized and formatted String
+    /// Conversion of type Double to localized and formatted type String
     /// - Parameters:
-    ///   - localeID: String locale id
+    ///   - localeID: String of locale id code
     ///   - fractionDigits: Number of maximum fraction digits
     /// - Returns: Localized and formatted String
     public func toString(fractionDigits: Int = 2, localeID: String? = nil) -> String {
@@ -37,6 +37,12 @@ extension Double {
     }
     
     
+    /// Conversion of type Double to type String that is formatted and localized as currency
+    /// - Parameters:
+    ///   - fractionDigits: Maximum number of fraction digits
+    ///   - currencyCode: String of currency id code
+    ///   - localeID: String of locale id code
+    /// - Returns: String that is formatted and localized as currency
     public func toStringAsCurrency(fractionDigits: Int = 2, currencyCode: String = "czk", localeID: String? = nil) -> String {
         
         // Setup of formatter
@@ -88,7 +94,12 @@ extension Float {
         return formatter.string(from: number)!
     }
     
-    
+    /// Conversion of type Float to type String that is formatted and localized as currency
+    /// - Parameters:
+    ///   - fractionDigits: Maximum number of fraction digits
+    ///   - currencyCode: String of currency id code
+    ///   - localeID: String of locale id code
+    /// - Returns: String that is formatted and localized as currency
     public func toStringAsCurrency(fractionDigits: Int = 2, currencyCode: String = "czk", localeID: String? = nil) -> String {
         
         // Setup of formatter

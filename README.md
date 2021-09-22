@@ -1,14 +1,14 @@
 # BasicToolsKit
 
 
-Personal basic tools kit.
+Personal tool-kit.
 
-Date type:
+Date extensions:
  - toString()
 
-Numbers:
+Numbers extensions:
 - toString() [Double, Float]
 - toStringAsCurrency() [Double, Float]
 
-String type:
+String extensions:
 - removeFirstAndLastBlankCharacters()

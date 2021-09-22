@@ -10,7 +10,9 @@ import XCTest
 
 class DateExtensionsTests: XCTestCase {
     
+    
     let date: Date = Date(timeIntervalSince1970: 0)
+    
     let format1: String = "dd MM yyyy"
     let format2: String = "HH mm ss"
 
@@ -25,13 +27,5 @@ class DateExtensionsTests: XCTestCase {
         
     }
     
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
 }
