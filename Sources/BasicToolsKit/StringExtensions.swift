@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension String {
     
     /// Removes blank characters at beggining and end of current String

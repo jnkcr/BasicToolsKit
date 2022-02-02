@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension Date {
     
     /// Converts date to String with given format

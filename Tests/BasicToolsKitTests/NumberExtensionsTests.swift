@@ -8,9 +8,7 @@
 import XCTest
 @testable import BasicToolsKit
 
-
 class NumberExtensionsTests: XCTestCase {
-    
     
     // Double
     let double01: Double = 1.151515
@@ -33,7 +31,6 @@ class NumberExtensionsTests: XCTestCase {
     let float11: Float = -1.151515
     let float12: Float = -2.7
     let float13: Float = -3
-    
     
     func testBasicDoubleFormating() {
         
@@ -140,14 +137,14 @@ class NumberExtensionsTests: XCTestCase {
 //        // USING CZECH LOCALE code to be able to predict result
 //
 //        // Set-up for testing with default maximumDigitalFraction
-//        let d01 = double01.toStringAsCurrency(localeID: "cs")
+//        let d01 = double01.toStringAsCurrency(localeID: "us")
 //        let d02 = double02.toStringAsCurrency(localeID: "cs")
 //        let d03 = double03.toStringAsCurrency(localeID: "cs")
 //        let d04 = double04.toStringAsCurrency(localeID: "cs")
 //        let d05 = double05.toStringAsCurrency(localeID: "cs")
 //
 //        // Test with default maximumDigitalFraction = 2
-//        XCTAssertEqual(d01, "1,15 Kč")
+//        XCTAssertEqual(d01, "CZK 1.15")
 //        XCTAssertEqual(d02, "2,70 Kč")
 //        XCTAssertEqual(d03, "3,00 Kč")
 //        XCTAssertEqual(d04, "3,00 Kč")

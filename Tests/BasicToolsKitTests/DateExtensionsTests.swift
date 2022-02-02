@@ -10,12 +10,10 @@ import XCTest
 
 class DateExtensionsTests: XCTestCase {
     
-    
     let date: Date = Date(timeIntervalSince1970: 0)
     
     let format1: String = "dd MM yyyy"
     let format2: String = "HH mm ss"
-
     
     func testConvertingDateToString() {
         
