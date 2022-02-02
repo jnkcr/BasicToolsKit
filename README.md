@@ -8,9 +8,9 @@ Available for iOS 14 or later.
 Date extensions:
  - toString()
 
-Numbers extensions:
-- toString() [Double, Float]
-- toStringAsCurrency() [Double, Float]
+FloatingPoint extensions:
+- toString()
+- toStringAsCurrency()
 
 String extensions:
 - removeFirstAndLastBlankCharacters()
