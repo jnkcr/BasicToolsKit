@@ -1,8 +1,10 @@
 # BasicToolsKit
+Personal tool-kit of some basic functionality.
 
+## Availability
+Available for iOS 14 or newer
 
-Personal tool-kit.
-
+## Functionality
 Date extensions:
  - toString()
 
