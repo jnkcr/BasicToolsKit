@@ -1,8 +1,8 @@
 # BasicToolsKit
-Personal tool-kit of some basic functionality.
+Personal tool-kit for some basic functionality.
 
 ## Availability
-Available for iOS 14 or newer
+Available for iOS 14 or later.
 
 ## Functionality
 Date extensions:
