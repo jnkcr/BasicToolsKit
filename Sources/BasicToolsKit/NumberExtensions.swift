@@ -12,31 +12,6 @@ import Foundation
 
 extension Double {
     
-    /// Conversion of type Double to localized and formatted type String
-    /// - Parameters:
-    ///   - localeID: String of locale id code
-    ///   - fractionDigits: Number of maximum fraction digits
-    /// - Returns: Localized and formatted String
-    public func toString(fractionDigits: Int = 2, localeID: String? = nil) -> String {
-        
-        // Setup of formatter
-        let formatter = NumberFormatter()
-        formatter.numberStyle           = .decimal
-        formatter.maximumFractionDigits = fractionDigits
-        
-        // Check for locale id
-        if let localeString = localeID {
-            formatter.locale = Locale(identifier: localeString)
-        }
-        
-        // Convert value to right format
-        let number = NSNumber(value: self)
-        
-        // Return formatted value
-        return formatter.string(from: number)!
-    }
-    
-    
     /// Conversion of type Double to type String that is formatted and localized as currency
     /// - Parameters:
     ///   - fractionDigits: Maximum number of fraction digits
@@ -70,30 +45,6 @@ extension Double {
 
 extension Float {
     
-    /// Conversion of Float type to localized and formatted String
-    /// - Parameters:
-    ///   - localeID: String locale id
-    ///   - fractionDigits: Number of maximum fraction digits
-    /// - Returns: Localized and formatted String
-    public func toString(fractionDigits: Int = 2, localeID: String? = nil) -> String {
-        
-        // Setup of formatter
-        let formatter = NumberFormatter()
-        formatter.numberStyle           = .decimal
-        formatter.maximumFractionDigits = fractionDigits
-        
-        // Check for locale id
-        if let localeString = localeID {
-            formatter.locale = Locale(identifier: localeString)
-        }
-        
-        // Convert value to right format
-        let number = NSNumber(value: self)
-        
-        // Return formatted value
-        return formatter.string(from: number)!
-    }
-    
     /// Conversion of type Float to type String that is formatted and localized as currency
     /// - Parameters:
     ///   - fractionDigits: Maximum number of fraction digits
@@ -115,6 +66,47 @@ extension Float {
         
         // Convert value to right format
         let number = NSNumber(value: self)
+        
+        // Return formatted value
+        return formatter.string(from: number)!
+    }
+    
+}
+
+extension BinaryFloatingPoint {
+    
+    /// Conversion of Numeric type to localized and formatted String
+    /// - Parameters:
+    ///   - fractionDigits: Maximum number of fraction digits
+    ///   - localeID: String locale id
+    /// - Returns: Localized and formatted String
+    @available(iOS 14, *)
+    public func toString(fractionDigits: Int = 2, localeID: String? = nil) -> String {
+        
+        // Setup of formatter
+        let formatter = NumberFormatter()
+        formatter.numberStyle           = .decimal
+        formatter.maximumFractionDigits = fractionDigits
+        
+        // Check for locale id
+        if let localeString = localeID {
+            formatter.locale = Locale(identifier: localeString)
+        }
+        
+        var number: NSNumber!
+        
+        // Convert value to right format
+        switch self {
+        case is Double:
+            number = NSNumber(value: self as! Double)
+        case is Float:
+            number = NSNumber(value: self as! Float)
+        case is Float16:
+            number = NSNumber(value: self as! Float)
+        default:
+            fatalError("Unable to find correct type")
+        }
+        // let number = NSNumber(value: self)
         
         // Return formatted value
         return formatter.string(from: number)!
